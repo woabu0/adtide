@@ -391,10 +391,6 @@ table .tag {
 
 /* Page Content */
 
-.page {
-  display: none;
-}
-
 .page-section {
   background-color: white;
   color: var(--text-primary);
