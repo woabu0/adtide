@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner List | Kolorowey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar-container">
+          <div class="sidebar">
+            <div class="logo">Kolorowey</div>
+            <ul class="menu">
+              <li class="menu-item dashboard active" data-page="dashboard">
+                <a href="#dashboard.html">
+                  <img src="/assets/home.png" alt="dashboard" />
+                  Dashboard
+                </a>
+              </li>
+              <li class="menu-dropdown">
+                <div class="menu-heading">
+                  <img src="/assets/create.png" alt="create" />
+                  <span>Create</span>
+                  <span class="dropdown-arrow">></span>
+                </div>
+                <ul class="dropdown-content">
+                  <li class="menu-item" data-page="partner">
+                    <a href="#create-partner.html"><span>Create Partner</span></a>
+                  </li>
+                  <li class="menu-item" data-page="publisher">
+                    <a href="#create-publisher.html"
+                      ><span>Create Publisher</span></a
+                    >
+                  </li>
+                  <li class="menu-item" data-page="unit">
+                    <a href="#create-unit.html"><span>Create Ad Unit</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-dropdown">
+                <div class="menu-heading">
+                  <img src="/assets/list.png" alt="list" />
+                  <span>List</span>
+                  <span class="dropdown-arrow">></span>
+                </div>
+                <ul class="dropdown-content">
+                  <li class="menu-item" data-page="partner-list">
+                    <a href="#partner-list.html"><span>Partner List</span></a>
+                  </li>
+                  <li class="menu-item" data-page="publisher-list">
+                    <a href="#publisher-list.html"><span>Publisher List</span></a>
+                  </li>
+                  <li class="menu-item" data-page="unit-list">
+                    <a href="#unit-list.html"><span>Ad Unit List</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="menu-heading logout">
+                  <img src="/assets/logout.png" alt="logout" />Logout
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Page Content -->
+          <div class="page-content">
+            <div class="page" id="partner-list">
+              <div class="page-section">
+                <div class="page-heading">All Partners</div>
+                <p>Manage and monitor your partner network</p>
+              </div>
+              <div class="page-section">
+                <div class="text-primary">Search Partners</div>
+                <div class="input-field">
+                  <input type="text" name="" placeholder="Search partners" />
+                </div>
+              </div>
+              <div class="table">
+                <table>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Partner ID</th>
+                    <th>Contact</th>
+                    <th>Status</th>
+                    <th>Publishers</th>
+                    <th>Ad Units</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                    <td>TechCorp</td>
+                    <td>TC001</td>
+                    <td>admin@techcorp.com</td>
+                    <td><h3 class="tag green-tag">Active</h3></td>
+                    <td>3</td>
+                    <td>12</td>
+                    <td>
+                      <button class="btn-secondary btn-blue text-secondary">
+                        Publishers
+                      </button>
+                      <button class="btn-secondary btn-green text-secondary">
+                        Ad Units
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
