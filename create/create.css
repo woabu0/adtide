@@ -1,0 +1,24 @@
+/* Form Begins */
+
+.form-heading {
+  color: #020817;
+  font-size: var(--space-xl);
+  font-weight: 600;
+}
+
+.form-sub-heading {
+  margin-top: 16px;
+}
+
+form .flex {
+  gap: var(--space-lg);
+}
+
+.line {
+  width: 100%;
+  height: 0.5px;
+  background-color: #c4c4c4;
+  margin: var(--space-xl) 0px;
+}
+
+/* Form Ends */

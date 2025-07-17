@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Partner | Kolorowey</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="create.css" />
   </head>
   <body>
     <div class="container">
@@ -13,8 +14,8 @@
         <div class="sidebar">
           <div class="logo">Kolorowey</div>
           <ul class="menu">
-            <li class="menu-item dashboard active" data-page="dashboard">
-              <a href="index.html">
+            <li class="menu-item" data-page="dashboard">
+              <a href="/dashboard/dashboard.html" class="dash">
                 <img src="/assets/home.png" alt="dashboard" />
                 Dashboard
               </a>
@@ -27,15 +28,19 @@
               </div>
               <ul class="dropdown-content">
                 <li class="menu-item" data-page="partner">
-                  <a href="create-partner.html"><span>Create Partner</span></a>
+                  <a href="/create/create-partner.html"
+                    ><span>Create Partner</span></a
+                  >
                 </li>
                 <li class="menu-item" data-page="publisher">
-                  <a href="create-publisher.html"
+                  <a href="/create/create-publisher.html"
                     ><span>Create Publisher</span></a
                   >
                 </li>
                 <li class="menu-item" data-page="unit">
-                  <a href="create-unit.html"><span>Create Ad Unit</span></a>
+                  <a href="/create/create-unit.html"
+                    ><span>Create Ad Unit</span></a
+                  >
                 </li>
               </ul>
             </li>
@@ -47,13 +52,17 @@
               </div>
               <ul class="dropdown-content">
                 <li class="menu-item" data-page="partner-list">
-                  <a href="partner-list.html"><span>Partner List</span></a>
+                  <a href="/list/partner-list.html"
+                    ><span>Partner List</span></a
+                  >
                 </li>
                 <li class="menu-item" data-page="publisher-list">
-                  <a href="publisher-list.html"><span>Publisher List</span></a>
+                  <a href="/list/publisher-list.html"
+                    ><span>Publisher List</span></a
+                  >
                 </li>
                 <li class="menu-item" data-page="unit-list">
-                  <a href="unit-list.html"><span>Ad Unit List</span></a>
+                  <a href="/list/unit-list.html"><span>Ad Unit List</span></a>
                 </li>
               </ul>
             </li>
@@ -133,6 +142,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

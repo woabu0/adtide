@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Ad Unit | Kolorowey</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="create.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <div class="logo">Kolorowey</div>
+          <ul class="menu">
+            <li class="menu-item" data-page="dashboard">
+              <a href="/dashboard/dashboard.html" class="dash">
+                <img src="/assets/home.png" alt="dashboard" />
+                Dashboard
+              </a>
+            </li>
+            <li class="menu-dropdown">
+              <div class="menu-heading">
+                <img src="/assets/create.png" alt="create" />
+                <span>Create</span>
+                <span class="dropdown-arrow">></span>
+              </div>
+              <ul class="dropdown-content">
+                <li class="menu-item" data-page="partner">
+                  <a href="/create/create-partner.html"
+                    ><span>Create Partner</span></a
+                  >
+                </li>
+                <li class="menu-item" data-page="publisher">
+                  <a href="/create/create-publisher.html"
+                    ><span>Create Publisher</span></a
+                  >
+                </li>
+                <li class="menu-item" data-page="unit">
+                  <a href="/create/create-unit.html"
+                    ><span>Create Ad Unit</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-dropdown">
+              <div class="menu-heading">
+                <img src="/assets/list.png" alt="list" />
+                <span>List</span>
+                <span class="dropdown-arrow">></span>
+              </div>
+              <ul class="dropdown-content">
+                <li class="menu-item" data-page="partner-list">
+                  <a href="/list/partner-list.html"
+                    ><span>Partner List</span></a
+                  >
+                </li>
+                <li class="menu-item" data-page="publisher-list">
+                  <a href="/list/publisher-list.html"
+                    ><span>Publisher List</span></a
+                  >
+                </li>
+                <li class="menu-item" data-page="unit-list">
+                  <a href="/list/unit-list.html"><span>Ad Unit List</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="menu-heading logout">
+                <img src="/assets/logout.png" alt="logout" />Logout
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Page Content -->
+        <div class="page-content">
+          <div class="page" id="unit">
+            <div class="page-section">
+              <div class="page-heading">Create Ad Unit</div>
+              <p>Configure a new advertising unit for your network</p>
+            </div>
+            <div class="page-section">
+              <div class="form-heading">Ad Unit Configuration</div>
+              <form action="" method="post">
+                <div class="form-sub-heading text-primary">Associations</div>
+                <div>
+                  <div class="input-field">
+                    <label for="">Publisher Name *</label>
+                    <select name="" id="">
+                      <option value="">Select publisher</option>
+                      <option value="net7">Mobile Game Studio</option>
+                      <option value="net15">News App Inc</option>
+                      <option value="net30">Social Media Platform</option>
+                      <option value="net30">E-commerce Store</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-sub-heading text-primary">Ad Details</div>
+                <div class="flex">
+                  <div class="input-field">
+                    <label for="">Ad Unit Name *</label>
+                    <input
+                      type="number"
+                      name=""
+                      placeholder="Enter ad unit name"
+                    />
+                  </div>
+                  <div class="input-field">
+                    <label for="">Ad Format *</label>
+                    <select name="" id="">
+                      <option value="">Select ad format</option>
+                      <option value="net7">Banner</option>
+                      <option value="net15">Interstitial</option>
+                      <option value="net30">Native</option>
+                      <option value="net30">Video</option>
+                      <option value="net30">Rewarded Video</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <div class="input-field">
+                    <label for="">Ad Size *</label>
+                    <select name="" id="">
+                      <option value="">Select ad size</option>
+                      <option value="net7">300x250</option>
+                      <option value="net15">728x90</option>
+                      <option value="net30">320x50</option>
+                      <option value="net30">468x60</option>
+                      <option value="net30">970x250</option>
+                      <option value="net30">160x600</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-sub-heading text-primary">Configuration</div>
+                <div>
+                  <div class="input-field">
+                    <label for="">Status</label>
+                    <select name="" id="">
+                      <option value="active">Active</option>
+                      <option value="inactive">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="input-field">
+                    <label for="">Passback Tag Head</label>
+                    <textarea name="head" id=""></textarea>
+                  </div>
+                  <div class="input-field">
+                    <label for="">Passback Tag Body</label>
+                    <textarea name="body" id=""></textarea>
+                  </div>
+                </div>
+                <div>
+                  <div class="input-field">
+                    <label for="">Ad Unit Code</label>
+                    <textarea name="head" id=""></textarea>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <button type="submit" class="btn">Create Ad Unit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

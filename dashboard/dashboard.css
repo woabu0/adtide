@@ -1,0 +1,125 @@
+/* Dashboard Begins */
+
+.page-cards {
+  margin: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-lg);
+  background-color: white;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: var(--space-2xl);
+  height: var(--space-2xl);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+}
+
+.card-blue {
+  background-color: var(--info);
+}
+
+.card-green {
+  background-color: var(--success);
+}
+
+.card-red {
+  background-color: var(--danger);
+}
+
+.card-yellow {
+  background-color: var(--warning);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card div {
+  margin-top: var(--space-sm);
+  font-size: var(--space-xl);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.lists {
+  margin: var(--space-lg);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.list {
+  width: 100%;
+  background-color: white;
+  color: var(--text-primary);
+  padding: var(--space-xl);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.blue-list {
+  background-color: var(--info-light);
+}
+
+.green-list {
+  background-color: var(--success-light);
+}
+
+.orange-list {
+  background-color: var(--warning-light);
+}
+
+.dot {
+  width: var(--space-sm);
+  height: var(--space-sm);
+  border-radius: 50%;
+}
+
+.blue-dot {
+  background-color: var(--info);
+}
+
+.green-dot {
+  background-color: var(--success);
+}
+
+.orange-dot {
+  background-color: var(--warning);
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+}
+
+.blue-tag {
+  color: #1e40af;
+  background-color: #dbeafe;
+}
+
+.green-tag {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+/* Dashboard Ends */
