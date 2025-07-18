@@ -34,3 +34,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Dynamic input fields
+
+function addDomainField() {
+  // Get the container where new fields will go
+  const container = document.querySelector(".domain-container");
+
+  // Create a new domain input field
+  const newField = document.createElement("div");
+  newField.className = "input-field";
+  newField.style.marginTop = "10px"; // optional spacing
+  newField.innerHTML = `
+    <label>Domain</label>
+    <input
+      type="text"
+      name=""
+      placeholder="Enter domain (e.g., example.com)"
+    />
+  `;
+
+  // Append it to the container
+  container.appendChild(newField);
+}

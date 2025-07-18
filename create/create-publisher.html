@@ -115,11 +115,7 @@
                   </div>
                   <div class="input-field">
                     <label for="">Publisher ID</label>
-                    <input
-                      type="text"
-                      name=""
-                      placeholder="Enter publisher ID (optional)"
-                    />
+                    <input type="text" name="" disabled placeholder="" />
                   </div>
                 </div>
                 <div class="flex">
@@ -131,14 +127,21 @@
                       placeholder="Enter email address"
                     />
                   </div>
-                  <div class="input-field">
-                    <label for="">Domain</label>
-                    <input
-                      type="text"
-                      name=""
-                      placeholder="Enter domain (e.g., example.com)"
-                    />
+                  <div class="btn-input flex">
+                    <div class="input-field">
+                      <label for="">Domain</label>
+                      <input
+                        type="text"
+                        name=""
+                        placeholder="Enter domain (e.g., example.com)"
+                      />
+                    </div>
+                    <div class="btn-plus" onclick="addDomainField()">+</div>
                   </div>
+                </div>
+                <div class="flex">
+                  <div class="input-field"></div>
+                  <div class="domain-container"></div>
                 </div>
                 <div class="flex">
                   <div class="input-field">
@@ -200,11 +203,9 @@
                 <div class="input-field">
                   <label for="">Ad Formats</label>
                   <div class="flex checkbox">
-                    <div><input type="checkbox" name="" id="" />Banner</div>
+                    <div><input type="checkbox" name="" id="" />Display</div>
                     <div><input type="checkbox" name="" id="" />Native</div>
-                    <div>
-                      <input type="checkbox" name="" id="" />Interstitial
-                    </div>
+                    <div><input type="checkbox" name="" id="" />Video</div>
                   </div>
                 </div>
                 <div class="line"></div>
