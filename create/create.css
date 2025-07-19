@@ -39,4 +39,21 @@ form .flex {
   flex-direction: column;
 }
 
+.payment-details {
+  width: 100%;
+}
+
+.payment-details > div {
+  display: none;
+  margin-top: var(--space-lg);
+  align-items: start;
+}
+
+.payment-notice {
+  width: 100%;
+  padding: var(--space-lg);
+  border-left: 3px solid var(--warning);
+  border-radius: var(--radius-md);
+}
+
 /* Form Ends */

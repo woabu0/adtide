@@ -10,70 +10,7 @@
   <body>
     <div class="container">
       <!-- Sidebar -->
-      <div class="sidebar-container">
-        <div class="sidebar">
-          <div class="logo">Kolorowey</div>
-          <ul class="menu">
-            <li class="menu-item" data-page="dashboard">
-              <a href="/dashboard/dashboard.html" class="dash">
-                <img src="/assets/home.png" alt="dashboard" />
-                Dashboard
-              </a>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/create.png" alt="create" />
-                <span>Create</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner">
-                  <a href="/create/create-partner.html"
-                    ><span>Create Partner</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher">
-                  <a href="/create/create-publisher.html"
-                    ><span>Create Publisher</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit">
-                  <a href="/create/create-unit.html"
-                    ><span>Create Ad Unit</span></a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/list.png" alt="list" />
-                <span>List</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner-list">
-                  <a href="/list/partner-list.html"
-                    ><span>Partner List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher-list">
-                  <a href="/list/publisher-list.html"
-                    ><span>Publisher List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit-list">
-                  <a href="/list/unit-list.html"><span>Ad Unit List</span></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="menu-heading logout">
-                <img src="/assets/logout.png" alt="logout" />Logout
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <the-sidebar class="sidebar-container"></the-sidebar>
 
       <!-- Main Content -->
       <div class="main-content">
@@ -106,28 +43,100 @@
             <div class="table">
               <table>
                 <tr>
+                  <th></th>
                   <th>Partner</th>
                   <th>Partner ID</th>
-                  <th>Contact</th>
-                  <th>Status</th>
-                  <th>Publishers</th>
-                  <th>Ad Units</th>
+                  <th>Country</th>
                   <th>Actions</th>
                 </tr>
                 <tr>
-                  <td>TechCorp</td>
+                  <td style="width: 8%">
+                    <img src="/assets/profile.png" alt="profile" />
+                  </td>
+                  <td style="width: 10%">
+                    <h4>TechCorp</h4>
+                    <h4 class="text-light">admin@techcorp.com</h4>
+                  </td>
                   <td>TC001</td>
-                  <td>admin@techcorp.com</td>
-                  <td><h3 class="tag green-tag">Active</h3></td>
-                  <td>3</td>
-                  <td>12</td>
+                  <td>India</td>
                   <td>
-                    <button class="btn-secondary btn-blue text-secondary">
-                      Publishers
-                    </button>
-                    <button class="btn-secondary btn-green text-secondary">
-                      Ad Units
-                    </button>
+                    <div class="actions">
+                      <img
+                        src="/assets/dots.png"
+                        alt="Menu"
+                        onclick="toggleDropdown(this)"
+                        style="cursor: pointer"
+                      />
+                      <div class="dropdown-container">
+                        <div class="dropdown">
+                          <div class="dropdown-parent">
+                            <h3>Payouts</h3>
+                            <div class="dropdown-child left-align">
+                              <h3>Payment Term</h3>
+                              <h3>Payment Method</h3>
+                              <h3>Payment Threshold</h3>
+                            </div>
+                          </div>
+                          
+                          <div class="dropdown-parent">
+                            <h3>Family</h3>
+                            <div class="dropdown-child left-align">
+                              <h3>Publisher</h3>
+                              <h3>Ad Unit</h3>
+                            </div>
+                          </div>
+                          
+                          <div class="dropdown-single">
+                            <h3>Modify</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 8%">
+                    <img src="/assets/profile.png" alt="profile" />
+                  </td>
+                  <td style="width: 10%">
+                    <h4>TechCorp</h4>
+                    <h4 class="text-light">admin@techcorp.com</h4>
+                  </td>
+                  <td>TC001</td>
+                  <td>India</td>
+                  <td>
+                    <div class="actions">
+                      <img
+                        src="/assets/dots.png"
+                        alt="Menu"
+                        onclick="toggleDropdown(this)"
+                        style="cursor: pointer"
+                      />
+                      <div class="dropdown-container">
+                        <div class="dropdown">
+                          <div class="dropdown-parent">
+                            <h3>Payouts</h3>
+                            <div class="dropdown-child left-align">
+                              <h3>Payment Term</h3>
+                              <h3>Payment Method</h3>
+                              <h3>Payment Threshold</h3>
+                            </div>
+                          </div>
+                          
+                          <div class="dropdown-parent">
+                            <h3>Family</h3>
+                            <div class="dropdown-child left-align">
+                              <h3>Publisher</h3>
+                              <h3>Ad Unit</h3>
+                            </div>
+                          </div>
+                          
+                          <div class="dropdown-single">
+                            <h3>Modify</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               </table>

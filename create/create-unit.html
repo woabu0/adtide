@@ -10,70 +10,7 @@
   <body>
     <div class="container">
       <!-- Sidebar -->
-      <div class="sidebar-container">
-        <div class="sidebar">
-          <div class="logo">Kolorowey</div>
-          <ul class="menu">
-            <li class="menu-item" data-page="dashboard">
-              <a href="/dashboard/dashboard.html" class="dash">
-                <img src="/assets/home.png" alt="dashboard" />
-                Dashboard
-              </a>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/create.png" alt="create" />
-                <span>Create</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner">
-                  <a href="/create/create-partner.html"
-                    ><span>Create Partner</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher">
-                  <a href="/create/create-publisher.html"
-                    ><span>Create Publisher</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit">
-                  <a href="/create/create-unit.html"
-                    ><span>Create Ad Unit</span></a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/list.png" alt="list" />
-                <span>List</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner-list">
-                  <a href="/list/partner-list.html"
-                    ><span>Partner List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher-list">
-                  <a href="/list/publisher-list.html"
-                    ><span>Publisher List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit-list">
-                  <a href="/list/unit-list.html"><span>Ad Unit List</span></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="menu-heading logout">
-                <img src="/assets/logout.png" alt="logout" />Logout
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <the-sidebar class="sidebar-container"></the-sidebar>
 
       <!-- Main Content -->
       <div class="main-content">
@@ -163,7 +100,9 @@
                   </div>
                 </div>
                 <div class="line"></div>
-                <button type="submit" class="btn">Create Ad Unit</button>
+                <div class="btn-parent">
+                  <button type="submit" class="btn">Create Ad Unit</button>
+                </div>
               </form>
             </div>
           </div>

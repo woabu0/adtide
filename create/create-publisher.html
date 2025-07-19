@@ -10,70 +10,7 @@
   <body>
     <div class="container">
       <!-- Sidebar -->
-      <div class="sidebar-container">
-        <div class="sidebar">
-          <div class="logo">Kolorowey</div>
-          <ul class="menu">
-            <li class="menu-item" data-page="dashboard">
-              <a href="/dashboard/dashboard.html" class="dash">
-                <img src="/assets/home.png" alt="dashboard" />
-                Dashboard
-              </a>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/create.png" alt="create" />
-                <span>Create</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner">
-                  <a href="/create/create-partner.html"
-                    ><span>Create Partner</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher">
-                  <a href="/create/create-publisher.html"
-                    ><span>Create Publisher</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit">
-                  <a href="/create/create-unit.html"
-                    ><span>Create Ad Unit</span></a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/list.png" alt="list" />
-                <span>List</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner-list">
-                  <a href="/list/partner-list.html"
-                    ><span>Partner List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher-list">
-                  <a href="/list/publisher-list.html"
-                    ><span>Publisher List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit-list">
-                  <a href="/list/unit-list.html"><span>Ad Unit List</span></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="menu-heading logout">
-                <img src="/assets/logout.png" alt="logout" />Logout
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <the-sidebar class="sidebar-container"></the-sidebar>
 
       <!-- Main Content -->
       <div class="main-content">
@@ -114,12 +51,6 @@
                     />
                   </div>
                   <div class="input-field">
-                    <label for="">Publisher ID</label>
-                    <input type="text" name="" disabled placeholder="" />
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="input-field">
                     <label for="">Email</label>
                     <input
                       type="email"
@@ -127,6 +58,8 @@
                       placeholder="Enter email address"
                     />
                   </div>
+                </div>
+                <div class="flex">
                   <div class="btn-input flex">
                     <div class="input-field">
                       <label for="">Domain</label>
@@ -138,10 +71,11 @@
                     </div>
                     <div class="btn-plus" onclick="addDomainField()">+</div>
                   </div>
+                  <div class="input-field"></div>
                 </div>
                 <div class="flex">
-                  <div class="input-field"></div>
                   <div class="domain-container"></div>
+                  <div class="input-field"></div>
                 </div>
                 <div class="flex">
                   <div class="input-field">
@@ -152,41 +86,11 @@
                     </select>
                   </div>
                   <div class="input-field">
-                    <label for="">Payment Term</label>
-                    <select name="" id="">
-                      <option value="">Select payment term</option>
-                      <option value="net7">Net 7</option>
-                      <option value="net15">Net 15</option>
-                      <option value="net30">Net 30</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="input-field">
-                    <label for="">Payment Method</label>
-                    <select name="" id="">
-                      <option value="">Select payment method</option>
-                      <option value="net7">PayPal</option>
-                      <option value="net15">Bank Transfer</option>
-                      <option value="net30">UPI</option>
-                    </select>
-                  </div>
-                  <div class="input-field">
                     <label for="">RevShare (%)</label>
                     <input
                       type="number"
                       name=""
                       placeholder="Enter revenue share percentage"
-                    />
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="input-field">
-                    <label for="">Minimum Threshold ($)</label>
-                    <input
-                      type="number"
-                      name=""
-                      placeholder="Enter minimum threshold"
                     />
                   </div>
                 </div>
@@ -209,7 +113,9 @@
                   </div>
                 </div>
                 <div class="line"></div>
-                <button type="submit" class="btn">Create Publisher</button>
+                <div class="btn-parent">
+                  <button type="submit" class="btn">Create Publisher</button>
+                </div>
               </form>
             </div>
           </div>

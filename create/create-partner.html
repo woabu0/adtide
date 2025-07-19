@@ -10,70 +10,7 @@
   <body>
     <div class="container">
       <!-- Sidebar -->
-      <div class="sidebar-container">
-        <div class="sidebar">
-          <div class="logo">Kolorowey</div>
-          <ul class="menu">
-            <li class="menu-item" data-page="dashboard">
-              <a href="/dashboard/dashboard.html" class="dash">
-                <img src="/assets/home.png" alt="dashboard" />
-                Dashboard
-              </a>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/create.png" alt="create" />
-                <span>Create</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner">
-                  <a href="/create/create-partner.html"
-                    ><span>Create Partner</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher">
-                  <a href="/create/create-publisher.html"
-                    ><span>Create Publisher</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit">
-                  <a href="/create/create-unit.html"
-                    ><span>Create Ad Unit</span></a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <div class="menu-heading">
-                <img src="/assets/list.png" alt="list" />
-                <span>List</span>
-                <span class="dropdown-arrow">></span>
-              </div>
-              <ul class="dropdown-content">
-                <li class="menu-item" data-page="partner-list">
-                  <a href="/list/partner-list.html"
-                    ><span>Partner List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="publisher-list">
-                  <a href="/list/publisher-list.html"
-                    ><span>Publisher List</span></a
-                  >
-                </li>
-                <li class="menu-item" data-page="unit-list">
-                  <a href="/list/unit-list.html"><span>Ad Unit List</span></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="menu-heading logout">
-                <img src="/assets/logout.png" alt="logout" />Logout
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <the-sidebar class="sidebar-container"></the-sidebar>
 
       <!-- Main Content -->
       <div class="main-content">
@@ -91,7 +28,7 @@
                   <div class="image-field">
                     <input type="image" src="" alt="" />
                   </div>
-                  <img src="/assets/upload.png" alt="" />
+                  <img src="/assets/upload.png" alt="upload" />
                 </div>
                 <div class="flex partner">
                   <div class="input-field">
@@ -103,12 +40,6 @@
                     />
                   </div>
                   <div class="input-field">
-                    <label for="">Partner ID *</label>
-                    <input type="text" name="" disabled placeholder="" />
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="input-field">
                     <label for="">Email *</label>
                     <input
                       type="text"
@@ -116,6 +47,8 @@
                       placeholder="partner@example.com"
                     />
                   </div>
+                </div>
+                <div class="flex">
                   <div class="input-field">
                     <label for="">Password *</label>
                     <input
@@ -124,8 +57,6 @@
                       placeholder="Enter password"
                     />
                   </div>
-                </div>
-                <div class="flex">
                   <div class="input-field">
                     <label for="">Country *</label>
                     <select id="" name="">
@@ -459,13 +390,89 @@
                       <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                   </div>
+                </div>
+                <div class="flex">
                   <div class="input-field">
-                    <label for="">Contact</label>
+                    <label for="">Payment Term</label>
+                    <select name="" id="">
+                      <option value="">Select payment term</option>
+                      <option value="net7">Net 7</option>
+                      <option value="net15">Net 15</option>
+                      <option value="net30">Net 30</option>
+                    </select>
+                  </div>
+                  <div class="input-field">
+                    <label for="">Minimum Threshold ($)</label>
                     <input
-                      type="text"
+                      type="number"
                       name=""
-                      placeholder="Enter partner name"
+                      placeholder="Enter minimum threshold"
                     />
+                  </div>
+                </div>
+                <div>
+                  <div class="input-field">
+                    <label for="">Payment Method</label>
+                    <select
+                      id="payment-method"
+                      onchange="togglePaymentFields()"
+                    >
+                      <option value="">Select payment method</option>
+                      <option value="paypal">PayPal</option>
+                      <option value="bank">Bank Transfer</option>
+                      <option value="upi">UPI</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="payment-details">
+                  <div data-method="paypal" class="flex">
+                    <div class="payment-notice">
+                      <h3 class="text-secondary">
+                        Minimum Payment Threshold : <strong>100 USD</strong>
+                      </h3>
+                      <div class="line"></div>
+                      <h3 class="text-secondary">
+                        Please choose other payment methods if your revenue has
+                        not reached $ 100 for the best support.
+                      </h3>
+                    </div>
+                    <div class="input-field">
+                      <label for="">PayPal</label>
+                      <input type="text" placeholder="Enter PayPal email" />
+                    </div>
+                  </div>
+                  <div data-method="bank" class="flex">
+                    <div class="payment-notice">
+                      <h3 class="text-secondary">
+                        Minimum Payment Threshold : <strong>100 USD</strong>
+                      </h3>
+                      <div class="line"></div>
+                      <h3 class="text-secondary">
+                        Please choose other payment methods if your revenue has
+                        not reached $ 100 for the best support.
+                      </h3>
+                    </div>
+                    <div class="input-field">
+                      <label for="">Bank Transfer</label>
+                      <input type="text" placeholder="Enter bank details" />
+                    </div>
+                  </div>
+                  <div data-method="upi" class="flex">
+                    <div class="payment-notice">
+                      <h3 class="text-secondary">
+                        Minimum Payment Threshold : <strong>100 USD</strong>
+                      </h3>
+                      <div class="line"></div>
+                      <h3 class="text-secondary">
+                        Please choose other payment methods if your revenue has
+                        not reached $ 100 for the best support.
+                      </h3>
+                    </div>
+                    <div class="input-field">
+                      <label for="">UPI</label>
+                      <input type="text" placeholder="Enter UPI ID" />
+                    </div>
                   </div>
                 </div>
                 <div class="line"></div>
