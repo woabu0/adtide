@@ -1,13 +1,57 @@
 /* Form Begins */
 
+/* Add spacing at the top of buttons on create pages */
+.btn-parent {
+  margin-top: var(--space-xl);
+}
+
+/* Ensure form inputs are responsive */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive form sections */
+.form-sub-heading {
+  font-size: var(--font-lg);
+}
+
+@media (max-width: 768px) {
+  .form-sub-heading {
+    font-size: var(--font-md);
+    margin-top: var(--space-md);
+  }
+  
+  .btn-parent {
+    margin-top: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .form-sub-heading {
+    font-size: var(--font-sm);
+  }
+  
+  .btn-parent {
+    margin-top: var(--space-md);
+  }
+}
+
 .form-heading {
-  color: #020817;
-  font-size: var(--space-xl);
+  color: var(--text-dark);
+  font-size: var(--font-xl);
   font-weight: 600;
 }
 
 .form-sub-heading {
-  margin-top: 16px;
+  margin-top: var(--space-lg);
 }
 
 form .flex {
@@ -16,8 +60,8 @@ form .flex {
 
 .line {
   width: 100%;
-  height: 0.5px;
-  background-color: #c4c4c4;
+  height: 1px;
+  background-color: var(--hover);
   margin: var(--space-xl) 0px;
 }
 
@@ -54,6 +98,152 @@ form .flex {
   padding: var(--space-lg);
   border-left: 3px solid var(--warning);
   border-radius: var(--radius-md);
+}
+
+/* Form Responsive */
+
+@media (max-width: 768px) {
+  .form-heading {
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-lg);
+  }
+  
+  form .flex {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  
+  form .flex > * {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .partner {
+    margin-top: 0;
+  }
+  
+  .btn-input {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+  
+  .btn-input .input-field {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .btn-plus {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    padding: 12px;
+    font-size: var(--font-lg);
+  }
+  
+  .domain-container {
+    width: 100%;
+  }
+  
+  .payment-details > div {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .payment-notice {
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    font-size: var(--font-sm);
+  }
+  
+  .payment-notice h3 {
+    font-size: var(--font-sm);
+    line-height: 1.5;
+  }
+  
+  .checkbox {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+  
+  .checkbox div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  
+  .checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+  
+  .text-light {
+    font-size: var(--font-xs);
+    margin-top: var(--space-xs);
+    line-height: 1.4;
+  }
+  
+  .form-sub-heading {
+    font-size: var(--font-sm);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+  
+  select {
+    font-size: var(--font-sm);
+    padding: 12px 16px;
+  }
+  
+  .domain-container .input-field {
+    margin-top: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .form-heading {
+    font-size: var(--font-md);
+    margin-bottom: var(--space-md);
+  }
+  
+  .form-sub-heading {
+    margin-top: var(--space-md);
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .input-field {
+    margin-top: var(--space-md);
+  }
+  
+  .btn-input {
+    gap: var(--space-xs);
+  }
+  
+  .btn-plus {
+    padding: 10px;
+    font-size: var(--font-md);
+  }
+  
+  .payment-notice {
+    padding: var(--space-sm);
+  }
+  
+  .payment-notice h3 {
+    font-size: var(--font-xs);
+  }
+  
+  .checkbox {
+    gap: var(--space-sm);
+  }
+  
+  .line {
+    margin: var(--space-lg) 0;
+  }
 }
 
 /* Form Ends */

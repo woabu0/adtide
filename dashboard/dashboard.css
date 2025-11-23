@@ -2,9 +2,9 @@
 
 .page-cards {
   margin: var(--space-lg);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-lg);
 }
 
@@ -46,7 +46,7 @@
 
 .card div {
   margin-top: var(--space-sm);
-  font-size: var(--space-xl);
+  font-size: var(--font-xl);
   color: var(--text-primary);
   font-weight: 700;
 }
@@ -113,13 +113,100 @@
 }
 
 .blue-tag {
-  color: #1e40af;
-  background-color: #dbeafe;
+  color: var(--info-dark);
+  background-color: var(--info-bg);
 }
 
 .green-tag {
-  color: #166534;
-  background-color: #dcfce7;
+  color: var(--success-dark);
+  background-color: var(--success-bg);
+}
+
+/* Dashboard Responsive */
+
+@media (max-width: 1024px) {
+  .page-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lists {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-cards {
+    margin: var(--space-md) var(--space-sm);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+  
+  .card {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  .card img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .card div {
+    font-size: var(--font-xl);
+    margin-top: var(--space-xs);
+  }
+  
+  .lists {
+    margin: var(--space-md) var(--space-sm);
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .list {
+    padding: var(--space-md);
+  }
+  
+  .inner-list {
+    padding: var(--space-sm);
+    margin-top: var(--space-md);
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-cards {
+    margin: var(--space-sm) var(--space-xs);
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .card {
+    padding: var(--space-sm);
+  }
+  
+  .card img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .card div {
+    font-size: var(--font-lg);
+    margin-top: var(--space-xs);
+  }
+  
+  .lists {
+    margin: var(--space-sm) var(--space-xs);
+    gap: var(--space-sm);
+  }
+  
+  .list {
+    padding: var(--space-sm);
+  }
+  
+  .inner-list {
+    padding: var(--space-xs);
+    margin-top: var(--space-sm);
+    flex-wrap: wrap;
+  }
 }
 
 /* Dashboard Ends */

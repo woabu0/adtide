@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in to Adtide Admin Dashboard to manage your ad network" />
+    <title>Sign In | Adtide Admin</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/auth/auth.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-wrapper">
+        <div class="login-header">
+          <a href="/" class="logo-link">
+            <h1 class="login-logo">Adtide</h1>
+          </a>
+          <h2 class="login-title">Admin Dashboard</h2>
+          <p class="login-subtitle">Sign in to manage your ad network</p>
+        </div>
+        
+        <form action="" method="post" class="login-form" id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="admin@adtide.com"
+              required
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="email-error"
+            />
+            <span class="error-message" id="email-error" role="alert" aria-live="polite"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="Enter your password"
+              required
+              autocomplete="current-password"
+              aria-required="true"
+              aria-describedby="password-error"
+            />
+            <span class="error-message" id="password-error" role="alert" aria-live="polite"></span>
+          </div>
+          
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" name="remember" id="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
+        </form>
+        
+        <div class="login-footer">
+          <p>Don't have an account? Contact administrator</p>
+        </div>
+      </div>
+      
+      <div class="login-background">
+        <div class="background-pattern"></div>
+      </div>
+    </div>
+    
+    <script src="/auth/auth.js"></script>
+  </body>
+</html>
+

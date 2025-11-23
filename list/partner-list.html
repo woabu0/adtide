@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Partner List | Kolorowey</title>
+    <title>Partner List | Adtide</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="list.css" />
   </head>
@@ -26,18 +26,14 @@
                 <button class="btn">Add New Partner</button>
               </div>
               <div class="search-bar">
-                <div>
-                  <img src="/assets/loupe.png" alt="loupe" />
+                <div class="search-icon">
+                  <img src="/assets/loupe.png" alt="Search" />
                 </div>
                 <input
                   type="text"
                   id="search-input"
                   placeholder="Search partners"
                 />
-                <select class="search-type">
-                  <option value="">by Name</option>
-                  <option value="">by ID</option>
-                </select>
               </div>
             </div>
             <div class="table">
@@ -50,21 +46,21 @@
                   <th>Actions</th>
                 </tr>
                 <tr>
-                  <td style="width: 8%">
+                  <td>
                     <img src="/assets/profile.png" alt="profile" />
                   </td>
-                  <td style="width: 10%">
+                  <td>
                     <h4>TechCorp</h4>
                     <h4 class="text-light">admin@techcorp.com</h4>
                   </td>
                   <td>TC001</td>
-                  <td>India</td>
+                  <td>China</td>
                   <td>
                     <div class="actions">
                       <img
                         src="/assets/dots.png"
                         alt="Menu"
-                        onclick="toggleDropdown(this)"
+                        onclick="window.SidebarUtils.toggleDropdown(this)"
                         style="cursor: pointer"
                       />
                       <div class="dropdown-container">
@@ -95,21 +91,21 @@
                   </td>
                 </tr>
                 <tr>
-                  <td style="width: 8%">
+                  <td>
                     <img src="/assets/profile.png" alt="profile" />
                   </td>
-                  <td style="width: 10%">
+                  <td>
                     <h4>TechCorp</h4>
                     <h4 class="text-light">admin@techcorp.com</h4>
                   </td>
                   <td>TC001</td>
-                  <td>India</td>
+                  <td>Bangladesh</td>
                   <td>
                     <div class="actions">
                       <img
                         src="/assets/dots.png"
                         alt="Menu"
-                        onclick="toggleDropdown(this)"
+                        onclick="window.SidebarUtils.toggleDropdown(this)"
                         style="cursor: pointer"
                       />
                       <div class="dropdown-container">

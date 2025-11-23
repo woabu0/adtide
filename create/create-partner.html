@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Partner | Kolorowey</title>
+    <title>Create Partner | Adtide</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="create.css" />
   </head>
@@ -24,12 +24,6 @@
             <div class="page-section">
               <div class="form-heading">Partner Details</div>
               <form action="" method="post">
-                <div class="upload">
-                  <div class="image-field">
-                    <input type="image" src="" alt="" />
-                  </div>
-                  <img src="/assets/upload.png" alt="upload" />
-                </div>
                 <div class="flex partner">
                   <div class="input-field">
                     <label for="">Partner Name *</label>
@@ -186,7 +180,8 @@
                       <option value="Hong Kong">Hong Kong</option>
                       <option value="Hungary">Hungary</option>
                       <option value="Iceland">Iceland</option>
-                      <option value="India">India</option>
+                      <option value="China">China</option>
+                      <option value="Bangladesh">Bangladesh</option>
                       <option value="Indonesia">Indonesia</option>
                       <option value="Iran, Islamic Republic of">
                         Iran, Islamic Republic of
@@ -415,7 +410,7 @@
                     <label for="">Payment Method</label>
                     <select
                       id="payment-method"
-                      onchange="togglePaymentFields()"
+                      onchange="window.SidebarUtils.togglePaymentFields()"
                     >
                       <option value="">Select payment method</option>
                       <option value="paypal">PayPal</option>
@@ -475,7 +470,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="line"></div>
                 <div class="btn-parent">
                   <button type="submit" class="btn">Create Partner</button>
                 </div>
