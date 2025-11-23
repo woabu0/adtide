@@ -19,31 +19,6 @@ textarea {
 }
 
 /* Responsive form sections */
-.form-sub-heading {
-  font-size: var(--font-lg);
-}
-
-@media (max-width: 768px) {
-  .form-sub-heading {
-    font-size: var(--font-md);
-    margin-top: var(--space-md);
-  }
-  
-  .btn-parent {
-    margin-top: var(--space-lg);
-  }
-}
-
-@media (max-width: 480px) {
-  .form-sub-heading {
-    font-size: var(--font-sm);
-  }
-  
-  .btn-parent {
-    margin-top: var(--space-md);
-  }
-}
-
 .form-heading {
   color: var(--text-dark);
   font-size: var(--font-xl);
@@ -51,7 +26,9 @@ textarea {
 }
 
 .form-sub-heading {
+  font-size: var(--font-lg);
   margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 form .flex {
@@ -191,12 +168,14 @@ form .flex {
   .form-sub-heading {
     font-size: var(--font-sm);
     margin-top: var(--space-lg);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xs);
   }
   
   select {
-    font-size: var(--font-sm);
-    padding: 12px 16px;
+    min-height: 48px;
+    padding: 14px 16px;
+    padding-right: 40px;
+    font-size: var(--font-md);
   }
   
   .domain-container .input-field {
@@ -212,12 +191,19 @@ form .flex {
   
   .form-sub-heading {
     margin-top: var(--space-md);
-    font-size: var(--font-sm);
-    margin-bottom: var(--space-sm);
+    font-size: var(--font-xs);
+    margin-bottom: var(--space-xs);
   }
   
   .input-field {
     margin-top: var(--space-md);
+  }
+  
+  select {
+    min-height: 44px;
+    padding: 12px 14px;
+    padding-right: 36px;
+    font-size: var(--font-sm);
   }
   
   .btn-input {
@@ -227,6 +213,7 @@ form .flex {
   .btn-plus {
     padding: 10px;
     font-size: var(--font-md);
+    min-height: 44px;
   }
   
   .payment-notice {

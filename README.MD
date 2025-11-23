@@ -87,6 +87,7 @@ adtide/
 ├── landing.js              # Landing page scripts
 ├── script.js               # Main application scripts
 ├── style.css               # Global styles
+├── favicon.svg             # Favicon icon
 ├── LICENSE                 # License file
 └── README.md               # Project documentation
 ```

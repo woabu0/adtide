@@ -537,6 +537,20 @@ textarea {
   font-size: var(--font-md);
   transition: all 0.2s ease;
   background-color: var(--bg-white);
+  min-height: 44px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Fix select dropdown appearance */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  padding-right: 40px;
 }
 
 .input-field input:hover,
@@ -645,6 +659,7 @@ textarea.error:focus {
 
 .page-section p {
   font-size: var(--font-lg);
+  margin-bottom: 0;
 }
 
 .page.active {
@@ -681,6 +696,25 @@ textarea.error:focus {
   .flex.gap > * {
     flex: 1 1 calc(50% - var(--space-lg));
     min-width: 180px;
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .page-section {
+    margin: var(--space-md);
+    padding: var(--space-lg);
+  }
+  
+  .input-field input,
+  .input-field select,
+  .input-field textarea {
+    padding: 12px 16px;
+    min-height: 46px;
+  }
+  
+  select {
+    padding-right: 38px;
   }
 }
 
@@ -784,7 +818,7 @@ textarea.error:focus {
   
   .page-section p {
     font-size: var(--font-sm);
-    margin-bottom: var(--space-lg);
+    margin-bottom: 0;
   }
   
   .flex {
@@ -817,9 +851,18 @@ textarea.error:focus {
   .input-field select,
   .input-field textarea {
     width: 100%;
-    padding: 12px 16px;
+    padding: 14px 16px;
     font-size: var(--font-md);
     border-radius: var(--radius-md);
+    min-height: 48px;
+    box-sizing: border-box;
+  }
+  
+  /* Fix select dropdown height on mobile */
+  select {
+    min-height: 48px;
+    padding-right: 40px;
+    background-position: right 16px center;
   }
   
   .btn {
@@ -921,8 +964,18 @@ textarea.error:focus {
   .input-field input,
   .input-field select,
   .input-field textarea {
-    padding: 10px 14px;
+    padding: 12px 14px;
     font-size: var(--font-sm);
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+  
+  /* Fix select dropdown height on small mobile */
+  select {
+    min-height: 44px;
+    padding-right: 36px;
+    background-position: right 14px center;
+    background-size: 10px;
   }
   
   .btn {
